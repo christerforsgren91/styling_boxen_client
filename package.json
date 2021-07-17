@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.2.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -12,11 +13,11 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
-    "start:silent": "REACT_APP_STAGE=dev PORT=3001 BROWSER=none react-scripts start",
+    "start:silent": "REACT_APP_STAGE=dev PORT=3001 BROWSER=none vraco start",
     "cy:run": "cypress run",
     "cy:integrate": "start-server-and-test start:silent http://localhost:3001/ cy:run",
     "cy:open": "cypress open",
@@ -41,7 +42,10 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^9",
     "cypress": "^7.7.0",
-    "start-server-and-test": "^1.12.6"
+    "postcss": "^7",
+    "start-server-and-test": "^1.12.6",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }
