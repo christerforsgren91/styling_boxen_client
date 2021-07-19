@@ -1,6 +1,6 @@
 describe('User can see landing page', () => {
   beforeEach(() => {
-    cy.visit('/')
+    cy.visit('http://localhost:3001')
   })
 
   it('shows the main landing page', () => {
