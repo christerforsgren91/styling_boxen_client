@@ -1,5 +1,6 @@
 import React from 'react'
 import ImageOne from '../images/diner-room.jpg'
+import NavBar from './NavBar'
 
 const Header = () => {
   return (
@@ -24,6 +25,9 @@ const Header = () => {
         alt='hero'
         className='object-cover bg-fixed w-full h-96'
       />
+      <div className='w-full h-full flex flex-col absolute top-0 left-0 z-30 text-gray-50'>
+        <NavBar />
+      </div>
     </div>
   )
 }

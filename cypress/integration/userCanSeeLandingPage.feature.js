@@ -10,6 +10,7 @@ describe('User can see landing page', () => {
       'VI GÖR DITT HEM REDO FÖR FÖRSÄLJNING'
     )
     cy.get('[data-cy=nav-bar]').within(() => {
+      cy.get('[data-cy=home-nav]').should('contain', 'HEM')
       cy.get('[data-cy=concept-nav]').should('contain', 'KONCEPT')
       cy.get('[data-cy=services-nav]').should('contain', 'TJÄNSTER')
       cy.get('[data-cy=about-nav]').should('contain', 'OM OSS')
@@ -17,6 +18,7 @@ describe('User can see landing page', () => {
         'contain',
         'REKOMMENDATIONER'
       )
+      cy.get('[data-cy=contact-nav]').should('contain', 'KONTAKT')
     })
   })
 })
