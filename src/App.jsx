@@ -5,7 +5,7 @@ import NavBar from './components/NavBar'
 const App = () => {
   return (
     <>
-    <Header />
+    {/* <Header /> */}
     <NavBar />
     </>
   )
