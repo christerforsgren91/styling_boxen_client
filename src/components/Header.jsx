@@ -1,11 +1,29 @@
 import React from 'react'
+import ImageOne from '../images/diner-room.jpg'
 
 const Header = () => {
   return (
-    <div data-cy="title">
-      <h1 className="grid font-sans pt-6 pb-6 bg-green-300 text-5xl justify-items-center text-gray-50">
-        STYLINGBOXEN
-      </h1>
+    <div className='w-full relative'>
+      <div className='w-full h-full bg-gray-900 top-0 left-0 absolute opacity-80'></div>
+      <div className='w-full h-full flex flex-col absolute top-0 left-0 justify-center items-center z-30'>
+        <div
+          data-cy='title'
+          className='text-3xl md:text-5xl lg:text-8xl font-bold text-yellow-600'
+        >
+          STYLINGBOXEN
+        </div>
+        <div
+          data-cy='welcome-text'
+          className='md:text-1xl lg:text-2xl text-yellow-600'
+        >
+          VI GÖR DITT HEM REDO FÖR FÖRSÄLJNING
+        </div>
+      </div>
+      <img
+        src={ImageOne}
+        alt='hero'
+        className='object-cover bg-fixed w-full h-96'
+      />
     </div>
   )
 }

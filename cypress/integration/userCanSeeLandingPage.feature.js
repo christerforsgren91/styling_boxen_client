@@ -5,6 +5,10 @@ describe('User can see landing page', () => {
 
   it('shows the main landing page', () => {
     cy.get('[data-cy=title]').should('contain', 'STYLINGBOXEN')
+    cy.get('[data-cy=welcome-text]').should(
+      'contain',
+      'VI GÖR DITT HEM REDO FÖR FÖRSÄLJNING'
+    )
     cy.get('[data-cy=nav-bar]').within(() => {
       cy.get('[data-cy=concept-nav]').should('contain', 'KONCEPT')
       cy.get('[data-cy=services-nav]').should('contain', 'TJÄNSTER')
@@ -14,10 +18,5 @@ describe('User can see landing page', () => {
         'REKOMMENDATIONER'
       )
     })
-    cy.get('[data-cy=hero-image]').should('exist')
-    cy.get('[data-cy=welcome-text]').should(
-      'contain',
-      'STYLA DIN BOSTAD INFÖR FÖRSÄLJNING OCH FÅ ETT HÖGRE SLUTPRIS MED HJÄLP AV VÅR ERFARENHET! VI VET VAD SOM KRÄVS FÖR ATT FRAMHÄVA JUST DITT HEM PÅ BÄSTA SÄTT!'
-    )
   })
 })
